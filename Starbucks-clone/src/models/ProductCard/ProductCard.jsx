@@ -2,11 +2,16 @@ import "./ProductCard.css";
 import { Link } from "react-router-dom";
 
 export const ProductCard = ({ data, baseUrl }) => {
-  const title = data.title || data.name || "Sin título";
-  const image = data.image || "https://placehold.co/150";
+  let linkTo;
 
-    return(
-      <Link to="" className="flex flex-col cursor-pointer group">
+  if (baseUrl) {
+     linkTo = `${baseUrl}/${data.title}`;
+  } else {
+     linkTo = `/item/${encodeURIComponent(data.title)}`;
+  }
+
+  return(
+      <Link to={linkTo} className="flex flex-col cursor-pointer group">
         <div className="product-image-container mt-5 flex justify-center">
           <img 
               src={data.image} 
@@ -16,10 +21,10 @@ export const ProductCard = ({ data, baseUrl }) => {
         </div>
 
         <div className="item-title-container text-center mt-4">
-          <span className="item-title font-bold text-[16px] md:text-[18px]">
-              {title}
+          <span className="item-title font-bold text-[16px] md:text-[18px] text-[#1e3932] group-hover:text-[#00754a] transition-colors">
+              {data.title}
           </span>
         </div>
       </Link>      
-    )
+  )
 };
