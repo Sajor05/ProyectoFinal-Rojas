@@ -38,12 +38,3 @@ Para facilitar la navegación del código, el proyecto está organizado de la si
 * **`/backend`**: Servidor de Node.js donde se gestionan las rutas, controladores de autenticación y modelos de datos.
 
 ---
-
-## 👤 Autor
-
-**Fabrizio Rojas**
-* **GitHub:** [@Sajor05](https://github.com/Sajor05)
-* **LinkedIn:** [Fabrizio Alexander Rojas](https://www.linkedin.com/in/fabrizio-alexander-rojas-4a8051381/)
-
----
-*Nota: Este proyecto fue desarrollado con fines educativos como un clon funcional de la plataforma de Starbucks.*
